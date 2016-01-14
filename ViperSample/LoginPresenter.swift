@@ -10,7 +10,8 @@ import Foundation
 
 // encapsulate presentation logic, to format the data for view and 
 // delegate task to interactor and receive result.
+// responsibilities: event handler, task delegator and data formatter
 
-class LoginPresenter : NSObject {
+class LoginPresenter {
     
 }

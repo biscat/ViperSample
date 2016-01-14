@@ -12,6 +12,7 @@ import Foundation
 // show alert or error message
 // or talk to another module Router to start a new module
 // it is said that it is the commander that initials View, Presenter, Intereactor
-class Route : NSObject {
+// animation also need to place here.
+class LoginRouter {
     
 }

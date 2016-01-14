@@ -8,7 +8,8 @@
 
 import Foundation
 
-//encapsulate all business logic and datasource access
-class LoginInteractor : NSObject {
+// encapsulate all business logic and datasource access
+// only guy that knows Model Entity and data layer
+class LoginInteractor {
     
 }

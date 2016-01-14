@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViperSample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ViperSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQA-Zb-yTq">
+                                <rect key="frame" x="20" y="148" width="560" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jx7-v8-nK9">
+                                <rect key="frame" x="20" y="199" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="jx7-v8-nK9" secondAttribute="leading" id="4Dq-ua-UYf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jx7-v8-nK9" secondAttribute="trailing" id="F0m-Lq-jeK"/>
+                            <constraint firstItem="jx7-v8-nK9" firstAttribute="top" secondItem="lQA-Zb-yTq" secondAttribute="bottom" constant="21" id="Z3W-t6-UbX"/>
+                            <constraint firstItem="lQA-Zb-yTq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="ddP-yB-9rj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="lQA-Zb-yTq" secondAttribute="leading" id="gYw-0j-ZIQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lQA-Zb-yTq" secondAttribute="trailing" id="uDC-zO-GIi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="jx7-v8-nK9" id="onV-4N-8hD"/>
+                        <outlet property="usernameField" destination="lQA-Zb-yTq" id="2Nd-vE-0AT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="247" y="446"/>
         </scene>
     </scenes>
 </document>

@@ -10,6 +10,12 @@ import Foundation
 
 // encapsulate all business logic and datasource access
 // only guy that knows Model Entity and data layer
-class LoginInteractor {
-    
+protocol LoginBusiness {
+    func loginWithUserNameAndPassword(username: String, password: String) -> Bool!  //this guy should have a callback
+}
+
+class LoginInteractor: LoginBusiness {
+    func loginWithUserNameAndPassword(username: String, password: String) -> Bool! {
+        return true
+    }
 }

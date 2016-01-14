@@ -29,16 +29,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJD-7K-HGl">
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXj-zW-2ZN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="jx7-v8-nK9" secondAttribute="leading" id="4Dq-ua-UYf"/>
+                            <constraint firstItem="kJD-7K-HGl" firstAttribute="top" secondItem="jx7-v8-nK9" secondAttribute="top" id="B2y-9V-pQ6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jx7-v8-nK9" secondAttribute="trailing" id="F0m-Lq-jeK"/>
+                            <constraint firstItem="kJD-7K-HGl" firstAttribute="top" secondItem="lQA-Zb-yTq" secondAttribute="bottom" constant="107" id="Fwa-p5-Fcp"/>
                             <constraint firstItem="jx7-v8-nK9" firstAttribute="top" secondItem="lQA-Zb-yTq" secondAttribute="bottom" constant="21" id="Z3W-t6-UbX"/>
                             <constraint firstItem="lQA-Zb-yTq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="ddP-yB-9rj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lQA-Zb-yTq" secondAttribute="leading" id="gYw-0j-ZIQ"/>
+                            <constraint firstItem="kJD-7K-HGl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nEq-E8-jAI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lQA-Zb-yTq" secondAttribute="trailing" id="uDC-zO-GIi"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B2y-9V-pQ6"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="jx7-v8-nK9" id="onV-4N-8hD"/>
